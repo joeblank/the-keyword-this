@@ -10,7 +10,7 @@
   // 3) What is the difference between call and apply?
 
       //Answer
-
+'Call accepts parameters and apply accepts an array as the second argument'
   // 4) What does .bind do?
 
       //Answer
@@ -24,15 +24,29 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+var user = {
+  username: "joe",
+  email: "joe@gmail.com",
+  getUsername: function () {
+    return this.username;
+  }
+}
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+user.getUsername();
 
 //Next Problem
 
 
 // Write the function definitions which will make the following function invocations function properly.
-
+var Car = function(make, model, year) {
+  this.make = 'make';
+  this.model = 'model';
+  this.year = 'year';
+  this.move = 0;
+  this.moveCar = function () {
+    return this.move =+ 10;
+  }
+}
   //Function Invocations Here
 
 var prius = new Car('Toyota', 'Prius', 2011);
@@ -69,7 +83,7 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
