@@ -2,19 +2,19 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+'Allows us to set the context as we need and makes functions, objects, etc much more flexible.'
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
-
+  'explicit, implicit, default/window, new/constructor'
       //Answer
 
   // 3) What is the difference between call and apply?
 
       //Answer
-'Call accepts parameters and apply accepts an array as the second argument'
+"The second argument when calling a function with .call is a parameter/parameters, and an array(of parameters) with .apply"
   // 4) What does .bind do?
 
       //Answer
-
+'bind sets the context for a function and stores it in a variable'
 
 //Next Problem
 
@@ -88,9 +88,9 @@ var userName = getMyUsername.call(myUser); //Fix this
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
   //Answer Here
-
+'iliketurtles'
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
-
+'myUser'
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
